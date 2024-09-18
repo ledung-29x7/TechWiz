@@ -3,7 +3,11 @@ import React from "react";
 const Home = () => {
   return (
     <div className="min-h-screen bg-gray-100">
+
+
       {/* Background Image Section */}
+
+
       <div className="relative">
         <img
           src="https://as1.ftcdn.net/v2/jpg/03/99/13/90/1000_F_399139097_gwLzIrKZ7l6UVEbuNrv8Yjm0tyxWGF9n.jpg"
@@ -15,7 +19,10 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Driving Service Section */}
+
+      {/* Driving Service Section */
+
+
       <section className="py-12 text-center">
         <h2 className="text-3xl font-semibold text-gray-800 mb-6">Driving Services</h2>
         <div className="flex justify-center space-x-12">
@@ -58,7 +65,9 @@ const Home = () => {
         </div>
       </section>
 
+
       {/* Contact Section */}
+
       <section className="py-12 bg-white text-center">
         <h2 className="text-3xl font-semibold text-gray-800 mb-6">Contact Us</h2>
         <p className="text-gray-600 mb-6">
