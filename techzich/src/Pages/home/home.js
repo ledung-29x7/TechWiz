@@ -20,7 +20,7 @@ const Home = () => {
       </div>
 
 
-      {/* Driving Service Section */
+      {/* Driving Service Section */}
 
 
       <section className="py-12 text-center">
