@@ -25,11 +25,7 @@ const Home = () => {
         <div className="flex justify-center space-x-8 lg:space-x-16">
           {/* Equipment Card */}
           <div className="bg-white shadow-lg p-6 rounded-lg">
-            <img
-              src="https://img.freepik.com/premium-photo/ambulance-interior-with-emergency-equipment-stretcher-transfer-chair-emergency-concept_235542-228.jpg"
-              alt="Equipment"
-              className="w-52 h-52 object-cover mx-auto mb-4 rounded-full"
-            />
+            <img src="https://img.freepik.com/premium-photo/ambulance-interior-with-emergency-equipment-stretcher-transfer-chair-emergency-concept_235542-228.jpg" alt="Equipment" className="w-52 h-52 object-cover mx-auto mb-4 rounded-full"/>
             <h3 className="font-bold text-xl text-gray-800 mb-2">Equipment</h3>
             <p className="text-gray-600">Fully equipped with medical equipment.</p>
           </div>
@@ -37,21 +33,14 @@ const Home = () => {
           {/* Emergency Care Card */}
           <div className="bg-white shadow-lg p-6 rounded-lg">
             <img
-              src="https://college.mayo.edu/media/mccms/content-assets/academics/explore-health-care-careers/Paramedic_ExploreCareers1024x512.jpg"
-              alt="Emergency Care"
-              className="w-52 h-52 object-cover mx-auto mb-4 rounded-full"
-            />
+              src="https://college.mayo.edu/media/mccms/content-assets/academics/explore-health-care-careers/Paramedic_ExploreCareers1024x512.jpg" alt="Emergency Care" className="w-52 h-52 object-cover mx-auto mb-4 rounded-full"/>
             <h3 className="font-bold text-xl text-gray-800 mb-2">Emergency Care</h3>
             <p className="text-gray-600">Provides emergency care.</p>
           </div>
 
           {/* Patient Transport Card */}
           <div className="bg-white shadow-lg p-6 rounded-lg">
-            <img
-              src="https://www.ontimetransport.com/cmsAdmin/uploads/specialty_care_placeholder.jpg"
-              alt="Patient Transport"
-              className="w-52 h-52 object-cover mx-auto mb-4 rounded-full"
-            />
+            <img src="https://www.ontimetransport.com/cmsAdmin/uploads/specialty_care_placeholder.jpg"alt="Patient Transport" className="w-52 h-52 object-cover mx-auto mb-4 rounded-full"/>
             <h3 className="font-bold text-xl text-gray-800 mb-2">Patient Transport</h3>
             <p className="text-gray-600">Transports patients to hospital.</p>
           </div>
