@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useStore } from "../../Store/contexts/hook";
 import { actions } from "../../Store/action";
 import * as apis from "../../apis"
-import FormInputUser from "../../Layout/Components/FormInput";
+import FormInput from "../../Layout/Components/FormInput";
 
 function Login() {
     const [formData, setFormData] = useState({
@@ -72,8 +72,8 @@ function Login() {
     
           {/* input  */}
           <form className="flex flex-col gap-5 " onSubmit={handleSubmit}>
-            <FormInputUser
-              icon={"fa-solid fa-user"}
+            <FormInput
+              titleInput={"Username"}
               type={"text"}
               nameInput={"username"}
               placeholder={"User Name"}
@@ -81,8 +81,8 @@ function Login() {
               onChange={handleChange}
             />
     
-            <FormInputUser
-              icon={"fa-solid fa-lock"}
+            <FormInput
+              titleInput={"Password"}
               type={"password"}
               nameInput={"password"}
               placeholder={"Password"}

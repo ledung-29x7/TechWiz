@@ -64,3 +64,10 @@ code {
   color: #77dada;
   cursor: pointer;
 }
+
+.box {
+  border-radius: 32px;
+  border: 2px solid var(--tw-gray-200, #eaecf0);
+  background: var(--tw-base, #fff);
+  box-shadow: 0 2px 4px #1018280d;
+}
