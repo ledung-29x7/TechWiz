@@ -7,7 +7,14 @@ const BookingPage = () => {
     destinationAddress: '',
     phoneNumber: '',
     userName: '',
+    selectedAmbulanceType: '',
   });
+
+  const ambulanceTypes = [
+    'Basic Life Support',
+    'Advanced Life Support',
+    'Pediatric Ambulance',
+  ];
 
   const navigate = useNavigate();
 
@@ -20,7 +27,8 @@ const BookingPage = () => {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();    
+    e.preventDefault();
+    console.log('Form Data:', formData); // Log thông tin đã điền để kiểm tra
     navigate('/waiting');
   };
 
@@ -81,9 +89,25 @@ const BookingPage = () => {
               required
             />
           </div>
+          <div>
+            <label htmlFor="selectedAmbulanceType" className="block text-left text-gray-700">Ambulance Type</label>
+            <select
+              id="selectedAmbulanceType"
+              name="selectedAmbulanceType"
+              value={formData.selectedAmbulanceType}
+              onChange={handleChange}
+              className="mt-1 p-2 w-full border rounded"
+              required
+            >
+              <option value="">Select ambulance type</option>
+              {ambulanceTypes.map((type, index) => (
+                <option key={index} value={type}>{type}</option>
+              ))}
+            </select>
+          </div>
           <button
             type="submit"
-            className=" float-right bg-red-600 text-white font-bold py-3 px-6 rounded hover:bg-red-700"
+            className="float-right bg-red-600 text-white font-bold py-3 px-6 rounded hover:bg-red-700"
           >
             Send
           </button>
