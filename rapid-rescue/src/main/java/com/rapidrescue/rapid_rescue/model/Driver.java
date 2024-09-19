@@ -20,7 +20,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Driver {
-     @Id
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long driverId;
 
@@ -32,7 +32,7 @@ public class Driver {
     private String license;
 
     @OneToOne
-    @JoinColumn(name = "ambulance_id")
+    @JoinColumn(name = "ambulance_id", nullable = false)
     private Ambulance ambulance;
 
     private String status;

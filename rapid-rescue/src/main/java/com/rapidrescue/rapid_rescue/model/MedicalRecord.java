@@ -27,10 +27,8 @@ public class MedicalRecord {
     @JoinColumn(name = "user_id", nullable = false)
     private Users user;
 
-    private String medicalHistory;
     private String allergies;
     private String medications;
-    private String emergencyContact;
     private Timestamp createdAt;
     private Timestamp updatedAt;
 }
