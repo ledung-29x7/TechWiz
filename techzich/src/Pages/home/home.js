@@ -1,17 +1,13 @@
 import React from "react";
 
-const Home = () => {
+const Home = ()=>{
   return (
-    <div className="min-h-screen bg-gray-100">
-
-
-      {/* Background Image Section */}
-
-
+    <div className="bg-gray-100">
+      {/* background img */}      
       <div className="relative">
         <img
           src="https://as1.ftcdn.net/v2/jpg/03/99/13/90/1000_F_399139097_gwLzIrKZ7l6UVEbuNrv8Yjm0tyxWGF9n.jpg"
-          alt="Ambulance"
+          alt="ambulance"
           className="w-full h-72 object-cover"
         />
         <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
@@ -19,13 +15,10 @@ const Home = () => {
         </div>
       </div>
 
-
-      {/* Driving Service Section */}
-
-
+      {/* driving service section */}
       <section className="py-12 text-center">
         <h2 className="text-3xl font-semibold text-gray-800 mb-6">Driving Services</h2>
-        <div className="flex justify-center space-x-12">
+        <div className="flex justify-center space-x-12">  
           <div className="text-center">
             <img
               src="https://img.freepik.com/premium-photo/ambulance-interior-with-emergency-equipment-stretcher-transfer-chair-emergency-concept_235542-228.jpg"
@@ -65,9 +58,7 @@ const Home = () => {
         </div>
       </section>
 
-
-      {/* Contact Section */}
-
+      {/* contact Section */}
       <section className="py-12 bg-white text-center">
         <h2 className="text-3xl font-semibold text-gray-800 mb-6">Contact Us</h2>
         <p className="text-gray-600 mb-6">
