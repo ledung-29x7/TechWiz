@@ -8,9 +8,10 @@ function FormInputUser({
   value,
   placeholder,
   onChange,
+  afocus
 }) {
   return (
-    <div className=" relative w-full outline-none">
+    <div className="mb-4 relative w-full outline-none">
       <label
         for="email-address-icon"
         class="block mb-2 text-xs font-medium text-gray-900 dark:text-white"
@@ -29,6 +30,8 @@ function FormInputUser({
             value={value}
             placeholder={placeholder}
             onChange={onChange}
+            required
+            autoFocus={afocus}
         />
       </div>
     </div>
