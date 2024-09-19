@@ -182,14 +182,14 @@ function HeaderUser() {
         ) : (
           <div className=" flex gap-10 items-center">
             <button
-              className=" bg-cyan-200 flex items-center justify-center  bottom font-bold "
+              className=" bg-blue-700 px-4 py-2 rounded text-white b flex items-center justify-center font-semibold "
               onClick={handleLogin}
             >
               Đăng ký / Đăng nhập
             </button>
           </div>
         )}
-  
+
         {isShowingSignUp ? (
           <div className="modal">
             <div className="flex h-full w-full">
