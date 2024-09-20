@@ -45,7 +45,7 @@ code {
 
 .modal_body {
   background-color: white;
-  border-radius: 10px;
+  border-radius: 6px;
   margin: auto;
   z-index: 9999;
   box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.2);
@@ -58,16 +58,9 @@ code {
 }
 
 .auth-form_btn {
-  font-size: 18px;
-  line-height: 20px;
-  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
   color: #77dada;
   cursor: pointer;
-}
-
-.box {
-  border-radius: 32px;
-  border: 2px solid var(--tw-gray-200, #eaecf0);
-  background: var(--tw-base, #fff);
-  box-shadow: 0 2px 4px #1018280d;
 }

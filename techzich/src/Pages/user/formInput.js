@@ -1,19 +1,40 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-function FormInputUser({icon,type,nameInput,value,placeholder,onChange}) {
-    return (
-        <div className=" relative w-full outline-none">
-            <div className=' absolute  pl-4 pb-1 '>
-                <FontAwesomeIcon style={{ color: "#a4adbc" }} icon={icon} />
-            </div>
-            <input className=" block w-full rounded-md border-0 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 outline-none"
-                type={type}
-                name={nameInput}
-                value={value}
-                placeholder={placeholder}
-                onChange={onChange}
-            />
+function FormInputUser({
+  icon,
+  titleInput,
+  type,
+  nameInput,
+  value,
+  placeholder,
+  onChange,
+  afocus
+}) {
+  return (
+    <div className="mb-4 relative w-full outline-none">
+      <label
+        for="email-address-icon"
+        class="block mb-2 text-xs font-medium text-gray-900 dark:text-white"
+      >
+        {titleInput}
+      </label>
+      <div class="relative">
+        <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+          <FontAwesomeIcon style={{ color: "#a4adbc" }} icon={icon} />
         </div>
-    );
+        <input
+            id="email-address-icon"
+            class="bg-gray-50 border border-gray-300  text-gray-900 text-xs rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            type={type}
+            name={nameInput}
+            value={value}
+            placeholder={placeholder}
+            onChange={onChange}
+            required
+            autoFocus={afocus}
+        />
+      </div>
+    </div>
+  );
 }
 export default FormInputUser;

@@ -1,15 +1,15 @@
 import { ISSHOWINGLOGIN, ISSHOWINGSIGNUP } from "./constants";
 
-export const ModalLogin = (isShowSig) => {
+export const ModalLogin = (isShowLog) => {
     return{
         type:ISSHOWINGLOGIN,
-        isShowSig
+        isShowLog
     }
 }
 
-export const ModalSigUp = (isShowLog) => {
+export const ModalSigUp = (isShowSig) => {
     return {
         type: ISSHOWINGSIGNUP,
-        isShowLog
+        isShowSig
     }
 }

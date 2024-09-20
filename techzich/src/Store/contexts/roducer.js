@@ -6,7 +6,7 @@ export const initState = {
 }
 
 function Reducers(state,action) {
-    switch (action.type) {
+    switch (action?.type) {
         case ISSHOWINGLOGIN : // sHOW Modal Login
             return{
                 ...state,
@@ -15,7 +15,7 @@ function Reducers(state,action) {
         case ISSHOWINGSIGNUP : // Show Modal SignUp
             return {
                 ...state,
-                isLogin: action.isShowSig
+                isSignUp: action.isShowSig
             }
         default:
             return state;

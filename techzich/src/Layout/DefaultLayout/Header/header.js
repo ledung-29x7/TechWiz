@@ -69,7 +69,7 @@ function HeaderUser() {
       };
       OpenSignUp(isSignUp);
     }, [isSignUp]);
-  
+    console.log(isSignUp)
     // show login
     useEffect(() => {
       const OpenLogin = (isLogin) => {
@@ -173,7 +173,7 @@ function HeaderUser() {
                 <li className="">
                   <span className=" ">
                     <FontAwesomeIcon icon="fa-solid fa-arrow-right-from-bracket" />
-                    LogOut
+                    Logout
                   </span>
                 </li>
               </ul>
@@ -182,21 +182,21 @@ function HeaderUser() {
         ) : (
           <div className=" flex gap-10 items-center">
             <button
-              className=" bg-cyan-200 flex items-center justify-center  bottom font-bold "
+              className=" bg-blue-700 px-4 py-2 rounded text-white b flex items-center justify-center font-semibold "
               onClick={handleLogin}
             >
               Đăng ký / Đăng nhập
             </button>
           </div>
         )}
-  
+
         {isShowingSignUp ? (
           <div className="modal">
             <div className="flex h-full w-full">
               <div id="overlay" className="modal_overlay"></div>
               <div className="modal_body">
                 <div className="auth-form ">
-                  <div className=" w-full flex justify-end p-3">
+                  <div className=" w-full flex justify-end">
                     <span
                       onClick={handleClose}
                       className=" w-6 h-6 text-3xl flex justify-center items-center text-center cursor-pointer "
@@ -216,10 +216,10 @@ function HeaderUser() {
               <div id="overlay" className="modal_overlay"></div>
               <div className="modal_body">
                 <div className="auth-form ">
-                  <div className=" w-full flex justify-end p-3">
+                  <div className=" w-full flex justify-end p-2">
                     <span
                       onClick={handleClose}
-                      className=" w-6 h-6 text-3xl flex justify-center items-center text-center cursor-pointer "
+                      className=" w-4 h-4 text-3xl flex justify-center items-center text-center cursor-pointer "
                     >
                       &times;
                     </span>
