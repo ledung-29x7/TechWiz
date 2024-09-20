@@ -8,7 +8,7 @@ import SignUp from "../../../Pages/user/signup";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function HeaderUser() {
-  const scrooltotop = () => {
+  const scrollToTop = () => {
     window.scrollTo({
       top: 0,
       behavior: "smooth",
@@ -97,28 +97,24 @@ function HeaderUser() {
   }, []);
 
   return (
-    <header className="container m-auto flex justify-between items-center h-[96px]">
-      <div className="flex items-center gap-24 h-full">
-        {/* Logo Section */}
-        <div className="h-full">
-          <Link className="h-full flex items-center" to={"/"}>
-            <div>
-              <img
-                onClick={scrooltotop}
-                className="w-36 h-24"
-                src="../logo.png"
-                alt="logo"
-              />
-            </div>
-          </Link>
-        </div>
+    <header className="container mx-auto flex justify-between items-center h-[96px] bg-white shadow-lg p-4">
+      {/* Logo Section */}
+      <div className="flex items-center flex-1">
+        <Link to={"/"} onClick={scrollToTop}>
+          {/* <img
+            className="w-40 h-auto transition-transform duration-200 hover:scale-105"
+            src="../logo.png"
+            alt="logo"
+          /> */}
+          <p className="w-40 h-auto transition-transform duration-200 hover:scale-105 ml-2 text-lg font-semibold">Logo</p>
+        </Link>
 
         {/* Navigation Links */}
-        <div className="flex gap-10 items-center cursor-pointer h-full">
-          <Link className="text-xl" to={"/"}>
+        <div className="flex gap-8 ml-8">
+          <Link className="text-lg text-gray-800 hover:text-blue-600 transition duration-200" to={"/"}>
             Home
           </Link>
-          <Link className="text-xl" to={"/contact"}>
+          <Link className="text-lg text-gray-800 hover:text-blue-600 transition duration-200" to={"/contact"}>
             Contact
           </Link>
         </div>
@@ -126,38 +122,34 @@ function HeaderUser() {
 
       {/* Authentication Section */}
       {isChecking ? (
-        <div className="relative">
-          <div className="flex justify-center items-center gap-2">
-            <button
-              onClick={handleHidden}
-              className="z-50 text-2xl rounded-full border-2 border-gray-800 w-[2.8rem] h-11 flex items-center justify-center"
-            >
-              <FontAwesomeIcon icon="fa-regular fa-user" />
-            </button>
-            <span className="text-slate-600 font-bold">
-              {localStorage.getItem("nameUser")}
-            </span>
-          </div>
+        <div className="relative flex items-center">
+          <button
+            onClick={handleHidden}
+            className="text-2xl rounded-full border-2 border-gray-800 w-12 h-12 flex items-center justify-center bg-white hover:bg-gray-200 transition duration-200 shadow-md"
+          >
+            <FontAwesomeIcon icon="fa-regular fa-user" />
+          </button>
+          <span className="text-gray-800 font-bold ml-2">
+            {localStorage.getItem("nameUser")}
+          </span>
 
           {/* Logout Dropdown */}
           {!isLogout && (
-            <ul className="absolute top-full -left-6 cursor-pointer mt-2 h-14 w-28 rounded-lg flex items-center justify-center bg-red-50">
-              <li onClick={handleLogout} className="text-red-600">
-                <FontAwesomeIcon icon="fa-solid fa-arrow-right-from-bracket" />
-                <span className="ml-2">Logout</span>
+            <ul className="absolute top-full left-0 mt-2 w-32 rounded-lg bg-white shadow-lg z-50">
+              <li onClick={handleLogout} className="flex items-center px-4 py-2 hover:bg-red-100 transition duration-200 cursor-pointer">
+                <FontAwesomeIcon icon="fa-solid fa-arrow-right-from-bracket" className="text-red-600" />
+                <span className="ml-2 text-red-600">Logout</span>
               </li>
             </ul>
           )}
         </div>
       ) : (
-        <div className="flex gap-10 items-center">
-          <button
-            className="bg-blue-700 px-4 py-2 rounded text-white flex items-center justify-center font-semibold"
-            onClick={handleLogin}
-          >
-            Sign up / Sign in
-          </button>
-        </div>
+        <button
+          className="bg-blue-700 px-4 py-2 rounded text-white font-semibold hover:bg-blue-600 transition duration-200 shadow-md"
+          onClick={handleLogin}
+        >
+          Sign up / Sign in
+        </button>
       )}
 
       {/* SignUp Modal */}

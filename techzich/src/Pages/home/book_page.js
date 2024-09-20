@@ -110,8 +110,7 @@ const BookingPage = () => {
             className="float-right bg-red-600 text-white font-bold py-3 px-6 rounded hover:bg-red-700"
           >
             Send
-          </button>
-          <a href="/" className="float-left mb-0 text-blue-500 hover:underline">Back to home</a>
+          </button>          
         </form>
       </div>
     </div>
