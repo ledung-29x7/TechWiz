@@ -47,11 +47,30 @@ const Home = () => {
 
       {/* About Us Section */}
       <section className="py-12 bg-white text-center">
-        <h2 className="text-3xl font-semibold text-gray-800 mb-6">About Us</h2>
-        <p className="text-gray-600">
-          Welcome to our ambulance booking website, where we are committed to providing the fastest and most efficient emergency medical services for all urgent needs.
-          We understand that every second counts in emergency situations. That's why we've designed a user-friendly and swift ambulance booking system. We offer 24/7 ambulance services, ensuring that our medical team is always ready to respond to your needs with dedication and professionalism.
-        </p>
+        <h2 className="text-4xl font-semibold text-gray-800 mb-8">About Us</h2>
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-cover bg-center bg-no-repeat h-96 rounded-lg shadow-lg overflow-hidden relative"
+            style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1532150010029-7a4b30a3d2f3)' }}>
+            <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+              <div className="text-white px-6 py-4 text-center">
+                <h3 className="text-2xl font-bold mb-4">Your Health, Our Priority</h3>
+                <p className="text-lg">
+                  Welcome to our ambulance booking website, where we are committed to providing
+                  the fastest and most efficient emergency medical services for all urgent needs.
+                  We understand that every second counts in emergency situations, and that's why
+                  we ensure quick and efficient service at all times.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <p className="text-gray-600 text-lg mt-8 leading-relaxed">
+            Our team of professionals is available 24/7 to provide the highest level of care. 
+            We take pride in our swift, reliable, and affordable ambulance booking system.
+            Whether you need transportation to a hospital or emergency care on-site, we are here to help.
+            Thank you for trusting us with your safety.
+          </p>
+        </div>
       </section>
 
       {/* Driving Services Section */}
@@ -135,7 +154,7 @@ const Home = () => {
       <section className="py-12 bg-white text-center">
         <h2 className="text-3xl font-semibold text-gray-800 mb-6">Contact Us</h2>
         <p className="text-gray-600 mb-6">
-          If you have any questions or need more information, feel free to reach out.
+        If you have any questions or need more information, <a href="/contact" className="text-blue-600 hover:underline">click here</a>.
         </p>
         <div className="flex flex-col sm:flex-row justify-center space-y-6 sm:space-y-0 sm:space-x-12">
           {[
