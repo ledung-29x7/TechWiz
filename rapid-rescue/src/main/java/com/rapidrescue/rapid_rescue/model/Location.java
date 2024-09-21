@@ -1,43 +1,41 @@
 package com.rapidrescue.rapid_rescue.model;
 
-import java.sql.Timestamp;
+import java.time.LocalDateTime;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
+@Table(name = "Locations")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class EmergencyRequest {
+public class Location {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long requestId;
+    private Long locationId;
 
     @ManyToOne
-    @JoinColumn(name = "user_id", nullable = false)
-    private Users user;
+    @JoinColumn(name = "driver_id", referencedColumnName = "driverId")
+    private Driver driver;
 
-    private String hospitalName;
-    private String pickupAddress;
-    private double pickupLat;
-    private double pickupLng;
+    @Column(nullable = false)
+    private double latitude;
 
-    @ManyToOne
-    @JoinColumn(name = "ambulance_id")
-    private Ambulance ambulance;
+    @Column(nullable = false)
+    private double longitude;
 
-    private String emergencyType;
-    private String status;
-    private Timestamp requestedAt;
-    private Timestamp updatedAt;
+    @Column(nullable = false)
+    private LocalDateTime timestamp;
 }

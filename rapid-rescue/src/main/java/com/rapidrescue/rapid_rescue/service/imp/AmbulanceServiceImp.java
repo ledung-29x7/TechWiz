@@ -1,9 +1,0 @@
-package com.rapidrescue.rapid_rescue.service.imp;
-
-import org.springframework.stereotype.Service;
-
-import com.rapidrescue.rapid_rescue.service.AmbulanceService;
-@Service
-public class AmbulanceServiceImp implements AmbulanceService {
-    
-}
