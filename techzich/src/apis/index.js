@@ -1,1 +1,2 @@
-export * from "./Authom"
+export * from "./Authom";
+export * from "./manage"

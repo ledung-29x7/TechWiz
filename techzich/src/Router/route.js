@@ -10,6 +10,7 @@ import SignUp from "../Pages/user/signup";
 import book_page from "../Pages/home/book_page"
 import waiting_page from "../Pages/home/waiting_page"
 import contact from "../Pages/home/contact"
+import ListUser from "../Pages/manage/listUser";
 const publicRouter = [
     {path:"/", component: Home,layout: null},
     {path:"/signup",component:SignUp,layout:null},
@@ -20,7 +21,8 @@ const publicRouter = [
     {path:"/driver", component: Driver, layout: LayoutDriver},
     {path:"/manage", component: EmergencyRequests,layout: LayoutManage},
     {path:"/manage/abulance", component: Abulance,layout: LayoutManage},
-    {path:"/manage/driverprofiles",component: DriverProfile, layout: LayoutManage}
+    {path:"/manage/driverprofiles",component: DriverProfile, layout: LayoutManage},
+    {path:"/manage/listuser",component:ListUser, layout:LayoutManage}
 ]
 
 export default publicRouter;    
